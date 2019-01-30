@@ -14,22 +14,23 @@ Heavily inspired by https://github.com/dependabot/dependabot-script
 ##### With your own ruby install
 * `bundle install` Then run the scripts yourself
 
-### Get a sense of security issues using bundler audit
+### List known security issues with bundler audit
 * `docker-compose run --rm gem_updater bash`
     + `bundle audit > outdated_gems.txt`
 
 ### The scripts
+
 * `dependabot_update_named_gem.rb`
     + Update a specific gem dependency.
 
-# Use these to update existing Pull Requests
+**Use these to update existing Pull Requests**
 * `dependabot_update_existing_outdated_gem_prs.rb`
     + Update outdated existing pull requests only (needs a rebase, etc)
     + Requires `outdated_gems.txt` file with advisories
 * `dependabot_update_existing_prs.rb`
     + Update all existing pull requests (Can be forced)
 
-# Careful with this one
+**Careful with this one**
 * `dependabot_update_all_gems.rb`
     + Update all the gems literally!
     + Avoid running this one as it will update all libs on a non-maintained code base and open PR's for each one. + Best to target the known security issue gems only.
