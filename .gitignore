@@ -1,3 +1,4 @@
 # Ignore bundled gems
 /.bundle
 outdated_gems.txt
+.token

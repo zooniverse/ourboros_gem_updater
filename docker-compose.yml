@@ -1,0 +1,10 @@
+version: '3'
+services:
+  gem_updater:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/app
+    environment:
+      - "GITHUB_OAUTH_TOKEN=${GITHUB_OAUTH_TOKEN}"
